@@ -75,7 +75,7 @@ public class SysTenantServiceImpl extends ServiceImpl<SysTenantMapper, SysTenant
 	 * @return
 	 */
 	@Override
-	@Cacheable(value = CacheConstants.TENANT_DETAILS)
+	// @Cacheable(value = CacheConstants.TENANT_DETAILS)
 	public List<SysTenant> getNormalTenant() {
 		return baseMapper.selectList(Wrappers.<SysTenant>lambdaQuery()
 				.eq(SysTenant::getStatus, CommonConstants.STATUS_NORMAL));
